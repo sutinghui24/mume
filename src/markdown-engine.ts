@@ -244,6 +244,9 @@ export class MarkdownEngine {
       linkify: this.enableLinkify,
     });
 
+    // 添加markdown-it-plantuml
+    this.md.use(require('markdown-it-plantuml'));
+
     // markdown-it extensions
     this.md.use(
       require(path.resolve(
